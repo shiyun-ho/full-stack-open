@@ -26,12 +26,12 @@ Depicts the situation where user creates a new note on the page https://studies.
 
         browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
         activate server
-        server->>browser: HTML document
+        server-->>browser: HTML document
         deactivate server
 
         browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
         activate server
-        server-->>browser: he css file
+        server-->>browser: the css file
         deactivate server
 
         browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
