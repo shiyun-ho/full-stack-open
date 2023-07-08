@@ -20,9 +20,18 @@ Depicts the situation where user goes to the single-page app version of the note
         server-->>browser: HTML document
         deactivate server
 
+        browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+        activate server
+        server-->>browser: the css
+        deactivate server
+
         browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
         activate server
         server-->>browser: spa.js
+
+        browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+        activate server
+        server-->>browser: data.json
 
         browser->>server: GET chrome-extension://.../app/detect_angular_for_extension_icon_bundle.js
         activate server
